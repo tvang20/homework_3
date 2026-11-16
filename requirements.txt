@@ -1,4 +1,4 @@
-# requirements.txt for the SSP environment (Porter6 + DeepCNF + result comparison)
+# requirements.txt for the SSP environment (Porter6 + DeepCNF)
 #
 # Install, with SSP active:
 #     conda activate SSP
