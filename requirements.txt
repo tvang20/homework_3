@@ -1,0 +1,29 @@
+# requirements.txt for the SSP environment (Porter6 + DeepCNF + result comparison)
+#
+# Install, with SSP active:
+#     conda activate SSP
+#     python -m pip install -r ~/SSP_setup/requirements.txt
+#
+# Python version: 3.10 (set when SSP is created with conda).
+# DeepCNF is a compiled C++ program and needs none of these packages.
+#
+# PyTorch: the line below makes pip use the CPU-only build of PyTorch, which is
+# about 200 MB instead of about 3 GB. Computers WITH an NVIDIA GPU: put a # in
+# front of the --extra-index-url line before installing to get the GPU build.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Porter6: deep learning and the ESM-2 protein language model
+torch==2.5.1
+fair-esm==2.0.0
+
+# Porter6 scripts and the comparison code
+numpy==1.26.4
+pandas==2.2.3
+biopython==1.84
+matplotlib==3.9.2
+seaborn==0.13.2
+scikit-learn==1.5.2
+tqdm==4.66.5
+
+# Optional: lets Jupyter / VS Code notebooks use SSP
+ipykernel==6.29.5
